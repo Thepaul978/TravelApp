@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TravelApp</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+</head>
+<body>
+<header>
+    <h1 th:text="${pageTitle}">Default Page Title</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a th:href="@{/home}">Home</a></li>
+        <li><a th:href="@{/about}">About</a></li>
+        <li><a th:href="@{/contact}">Contact</a></li>
+    </ul>
+</nav>
+
+<section>
+    <h2>Welcome to our website!</h2>
+    <p th:text="${welcomeMessage}">This is a sample welcome message.</p>
+</section>
+
+<footer>
+    <p>&copy; 2023 Your Company Name</p>
+</footer>
+</body>
+</html>
