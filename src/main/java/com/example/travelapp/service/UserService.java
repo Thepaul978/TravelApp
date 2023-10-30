@@ -28,4 +28,12 @@ public class UserService {
     public User getUserById(Long id) {
         return userRepository.findById(id).orElse(null);
     }
+
+    public boolean authenticateUser(String username, String password) {
+        User user = userRepository.findByUsername(username);
+        if (user != null && user.getPassword().equals(password)) {
+            return true; // Authentication successful
+        }
+        return false; // Authentication failed
+    }
 }
